@@ -130,7 +130,7 @@
 						{
 							"name" : "Arcane Fire Bonus",
 							"values" : [5, 15, 25, 35, 55],
-							"ratios" : [40, 0],
+							"ratios" : [50, 0],
 							"overdrive" : 55
 						},
 						{
@@ -232,7 +232,7 @@
 						"Instead of dying, Alpha initiates 3.5s reboot sequence. If her reboot health is not destroyed before time runs out, she will return to life.",
 						"When alive, Alpha's special energy bar shows the time until Infinite Reboot is available. When rebooting, the bar counts down to when she will revive.",
 						[
-							"Reboot health: 40% max health (+65% of Bonus Max Energy)",
+							"Reboot health: 600-2600 (level 1-12) (+65% of Bonus Max Energy)",
 							"Reboot Duration: 3.5s",
 							"Alpha revives with her Prime Directive & Core Charge ability cooldowns refreshed."
 						]
@@ -266,7 +266,7 @@
 						{
 							"name" : "Damage",
 							"values" : [80, 100, 120, 140, 160],
-							"ratios" : [180, 80],
+							"ratios" : [180, 60],
 							"overdrive" : false
 						},
 						{
@@ -288,7 +288,7 @@
 							"overdrive" : false
 						},
 						{
-							"name" : "Slow Duration",
+							"name" : "Slow Duration (s)",
 							"values" : [1.5, 1.5, 1.5, 1.5, 1.5],
 							"ratios" : [0, 0],
 							"overdrive" : false
@@ -336,6 +336,12 @@
 							"values" : [7, 8, 9, 10, 12],
 							"ratios" : [0, 3],
 							"overdrive" : 12
+						},
+						{
+							"name" : "Bonus Damage / Stack (%)",
+							"values" : [11, 11, 11, 11, 15],
+							"ratios" : [0, 0],
+							"overdrive" : 15
 						}
 					]
 				},
@@ -640,7 +646,7 @@
 							"overdrive" : false
 						},
 						{
-							"name" : "Slow Duration",
+							"name" : "Slow Duration (s)",
 							"values" : [0.8, 0.8, 0.8, 0.8, 1.2],
 							"ratios" : [0, 0],
 							"overdrive" : 1.2
@@ -738,7 +744,7 @@
 			"stats" : {
 				"health" : {
 					"min" : 679,
-					"max" : 2045
+					"max" : 2054
 				},
 				"energy" : {
 					"min" : 270,
@@ -746,7 +752,7 @@
 				},
 				"weapon" : {
 					"min" : 71,
-					"max" : 108
+					"max" : 130
 				},
 				"atkspeed" : {
 					"min" : 100,
@@ -1848,7 +1854,7 @@
 						"Fortress claws his target, causing it to bleed for several seconds.",
 						[
 							"Attacks from Fortress and his allies increase bleeding by one stack.",
-							"Upon reaching 6 stacks, the target is dealt a burst of damage based on its max health and receives mortal wound (reduced healing).",
+							"Upon reaching 7 stacks, the target is dealt a burst of damage based on its max health and receives mortal wound (reduced healing).",
 							"Overdrive: At max rank, the target is also slowed by 40% upon reaching 6 stacks.",
 							"Bleeding damage per second: 10 (+15% of crystal power)"
 						]
@@ -1856,9 +1862,9 @@
 					"stats" : [
 						{
 							"name" : "Cooldown",
-							"values" : [11, 10, 9, 8, 6],
+							"values" : [11, 10, 9, 8, 7],
 							"ratios" : [0, 0],
-							"overdrive" : 6
+							"overdrive" : false
 						},
 						{
 							"name" : "Energy Cost",
@@ -1912,7 +1918,7 @@
 							"overdrive" : false
 						},
 						{
-							"name" : "Attack Speed",
+							"name" : "Attack Speed (%)",
 							"values" : [30, 45, 60],
 							"ratios" : [0, 0],
 							"overdrive" : false
@@ -1931,7 +1937,7 @@
 						},
 						{
 							"name" : "Wolf Base Health",
-							"values" : [400, 600, 800],
+							"values" : [300, 450, 600],
 							"ratios" : [0, 0],
 							"overdrive" : false
 						}
@@ -2340,18 +2346,18 @@
 						},
 						{
 							"name" : "Bonus Damage / Stack",
-							"values" : [20, 35, 50, 65, 95],
-							"ratios" : [20, 0],
-							"overdrive" : 95
+							"values" : [10, 25, 40, 55, 85],
+							"ratios" : [25, 0],
+							"overdrive" : 85
 						},
 						{
-							"name" : "Slow Duration",
+							"name" : "Slow Duration (s)",
 							"values" : [2, 2, 2, 2, 2.5],
 							"ratios" : [0, 0],
 							"overdrive" : 2.5
 						},
 						{
-							"name" : "Slow Strength",
+							"name" : "Slow Strength (%)",
 							"values" : [65, 65, 65, 65, 65],
 							"ratios" : [0, 0],
 							"overdrive" : false
@@ -2633,7 +2639,7 @@
 						"Idris unlocks unique combat styles upon attaining 100 weapon or crystal power:",
 						[
 							"Melee (Weapon): Idris’s Shroudstep becomes an instantaneous blink. His basic attacks also restore 10 stamina and reduce the cooldowns of his Shroudstep and Shimmer Strike abilities by 1s.",
-							"Ranged (Crystal): Idris gains a 3.8-meter ranged attack with a 80% crystal ratio but only 50% weapon ratio."
+							"Ranged (Crystal): Idris gains a 3.8-meter ranged attack with a 75% crystal ratio (with bonus crystal damage of 19-85) but only 50% weapon ratio."
 						],
 						"Instead of energy, Idris uses stamina to activate his abilities. Purchasing items with energy and energy recharge instead increases his stamina and stamina regeneration.",
 						[
@@ -2871,9 +2877,9 @@
 						},
 						{
 							"name" : "Bonus Pierce",
-							"values" : [5, 6, 7, 8, 10],
+							"values" : [5, 6, 7, 8, 15],
 							"ratios" : [0, 0],
-							"overdrive" : 10
+							"overdrive" : 15
 						}
 					]
 				},
@@ -2996,9 +3002,9 @@
 						},
 						{
 							"name" : "Splash Damage",
-							"values" : [40, 70, 100, 130, 190],
-							"ratios" : [140, 0],
-							"overdrive" : 190
+							"values" : [40, 70, 100, 130, 160],
+							"ratios" : [135, 0],
+							"overdrive" : 160
 						}
 					]
 				},
@@ -3326,7 +3332,7 @@
 						},
 						{
 							"name" : "Barrier",
-							"values" : [100, 200, 300, 400, 500],
+							"values" : [75, 185, 295, 405, 515],
 							"ratios" : [125, 0],
 							"overdrive" : false
 						},
@@ -3386,9 +3392,9 @@
 						},
 						{
 							"name" : "Lifesteal / Stack (%)",
-							"values" : [10, 10, 10, 10, 10],
+							"values" : [9, 9, 9, 9, 11],
 							"ratios" : [0, 0],
-							"overdrive" : false
+							"overdrive" : 11
 						},
 						{
 							"name" : "Weakness Duration",
@@ -3430,7 +3436,7 @@
 							"overdrive" : false
 						},
 						{
-							"name" : "Slow Duration",
+							"name" : "Slow Duration (s)",
 							"values" : [3, 3.5, 4],
 							"ratios" : [0, 0],
 							"overdrive" : false
@@ -3453,7 +3459,7 @@
 			"stats" : {
 				"health" : {
 					"min" : 842,
-					"max" : 2587
+					"max" : 2609
 				},
 				"energy" : {
 					"min" : 0,
@@ -3499,6 +3505,7 @@
 						[
 							"Overdrive: At max rank, ths ability also resets the cooldown of Combat Roll if Lance hits an enemy.",
 							"If this attack hits at least one enemy, Lance will immediately recover from the ability.",
+							"If this attack misses, Lance takes 0.7 seconds to recover.",
 							"Deals 50% less damage to minions."
 						]
 					],
@@ -4171,6 +4178,186 @@
 							"name" : "Secondary Target Damage",
 							"values" : [125, 200, 275],
 							"ratios" : [75, 0],
+							"overdrive" : false
+						}
+					]
+				}
+			}
+		},
+		{
+			"slug" : "petal",
+			"name" : "Petal",
+			"thumb" : "petal.png",
+			"description" : "Commands 3 pets who tear apart enemies and block incoming skillshots.",
+			"stats" : {
+				"health" : {
+					"min" : 636,
+					"max" : 1983
+				},
+				"energy" : {
+					"min" : 410,
+					"max" : 718
+				},
+				"weapon" : {
+					"min" : 64,
+					"max" : 134
+				},
+				"atkspeed" : {
+					"min" : 100,
+					"max" : 136.3
+				},
+				"armor" : {
+					"min" : 20,
+					"max" : 50
+				},
+				"shield" : {
+					"min" : 20,
+					"max" : 50
+				},
+				"range" : 6.2,
+				"movespeed" : 3.2
+			},
+			"abilities" : {
+				"heroicperk" : {
+					"name" : "Munions",
+					"thumb" : "munions.png",
+					"description" : [
+						"A few moments after Petal plants a Bramblebloom Seed, it will automatically sprout into a Munion pet, which will fight alongside Petal up to a maximum of 3 Munions."
+					]
+				},
+				"a" : {
+					"name" : "Brambleboom Seeds",
+					"thumb" : "brambleboom-seeds.png",
+					"description" : [
+						"Petal plants a Bramblebloom Seed directly in front of her.",
+						[
+							"If an enemy hero steps on a seed, the seed will explode and knock the enemy back.",
+							"Petal's seeds have a small vision radius."
+						]
+					],
+					"stats" : [
+						{
+							"name" : "Cooldown",
+							"values" : [3, 3, 3, 3, 3],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Energy Cost",
+							"values" : [60, 65, 70, 75, 80],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Pet Health",
+							"values" : [100, 180, 260, 340, 500],
+							"ratios" : [50, 0],
+							"overdrive" : 500
+						},
+						{
+							"name" : "Pet Defense",
+							"values" : [30, 40, 50, 60, 80],
+							"ratios" : [5, 0],
+							"overdrive" : 80
+						},
+						{
+							"name" : "Pet Damage",
+							"values" : [7, 14, 21, 28, 42],
+							"ratios" : [40, 0],
+							"overdrive" : 42
+						},
+						{
+							"name" : "Seed Health",
+							"values" : [50, 80, 110, 140, 200],
+							"ratios" : [15, 0],
+							"overdrive" : 200
+						},
+						{
+							"name" : "Damage",
+							"values" : [75, 125, 175, 225, 275],
+							"ratios" : [100, 0],
+							"overdrive" : false
+						}
+					]
+				},
+				"b" : {
+					"name" : "Trampoline!",
+					"thumb" : "trampoline.png",
+					"description" : [
+						"Petal leaps in the target direction, leaving a Bramblebloom Seed behind at her original location. Using this ability will increase Petal's basic-attack range and amplify her weapon & crystal power for 5s."
+					],
+					"stats" : [
+						{
+							"name" : "Cooldown",
+							"values" : [15, 14.5, 14, 13.5, 12],
+							"ratios" : [0, 0],
+							"overdrive" : 12
+						},
+						{
+							"name" : "Energy Cost",
+							"values" : [80, 85, 90, 95, 100],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Bonus Attack Range",
+							"values" : [0, 0.2, 0.4, 0.6, 1.2],
+							"ratios" : [0, 0],
+							"overdrive" : 1.2
+						},
+						{
+							"name" : "Crystal Amp (%)",
+							"values" : [15, 15, 15, 15, 15],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Weapon Amp (%)",
+							"values" : [15, 15, 15, 15, 15],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						}
+					]
+				},
+				"c" : {
+					"name" : "Spontaneous Combustion",
+					"thumb" : "spontaneous-combustion.png",
+					"description" : [
+						"Petal sends the nearest munion dashing towards the targeted location, exploding after 1.2 seconds. The explosion slows and deals splash damage to nearby enemies while healing nearby allies.",
+						[
+							"Detonated pets become Bramblebloom Seeds.",
+							"This ability has 3 charges."
+						]
+					],
+					"stats" : [
+						{
+							"name" : "Charge Time",
+							"values" : [30, 25, 20],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Energy Cost",
+							"values" : [40, 40, 40],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Damage",
+							"values" : [180, 240, 300],
+							"ratios" : [70, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Cooldown",
+							"values" : [0.4, 0.4, 0.4],
+							"ratios" : [0, 0],
+							"overdrive" : false
+						},
+						{
+							"name" : "Heal",
+							"values" : [75, 125, 175],
+							"ratios" : [60, 0],
 							"overdrive" : false
 						}
 					]
